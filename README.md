@@ -92,16 +92,16 @@ mjane
 
 ## TECHNICAL STACK
 
-| Front            | Back         | Deploy  |
-| ---------------- | ------------ | ------- |
-| React            | Node.js      | Netlify |
-| React Router Dom | Express      | Heroku  |
-| Redux            | MongoDB      |         |
-| Axios            | Mongoose     |         |
-| Jest             | JsonWebToken |         |
-| Bootswatch       | Bcrypt       |         |
-|                  | Paypal API   |         |
-|                  | Multer       |         |
+| Front            | Back         | Deploy    |
+| ---------------- | ------------ | --------- |
+| React            | Node.js      | Cyclic.sh |
+| React Router Dom | Express      |           |
+| Redux            | MongoDB      |           |
+| Axios            | Mongoose     |           |
+| Jest             | JsonWebToken |           |
+| Bootswatch       | Bcrypt       |           |
+|                  | Paypal API   |           |
+|                  | Multer       |           |
 
 ## License
 
