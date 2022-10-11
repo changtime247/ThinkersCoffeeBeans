@@ -85,10 +85,7 @@ const RegisterPage = () => {
       </Form>
       <Row className='py-3 links-color-black'>
         <Col>Have an account already?</Col>
-        <Link
-          className='btn btn-outline-primary mt-1'
-          to={redirect ? `/login?redirect=${redirect}` : '/login'}
-        >
+        <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
           Login
         </Link>
       </Row>

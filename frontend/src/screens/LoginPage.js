@@ -57,10 +57,7 @@ const LoginPage = () => {
       </Form>
       <Row className='py-3 links-color-black'>
         <Col>New Customer?</Col>
-        <Link
-          className='btn btn-outline-primary'
-          to={redirect ? `/register?redirect=${redirect}` : '/register'}
-        >
+        <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
           Register
         </Link>
       </Row>
