@@ -12,7 +12,7 @@ const products = [
     numReviews: 1,
     reviews: [
       {
-        name: 'sam de luc',
+        name: 'Real Plato',
         rating: 4,
         comment: 'love the flavor. but it doesnt beat original flavor',
         user: '6334e719c72977e6cc01826a',
@@ -35,7 +35,7 @@ const products = [
     numReviews: 4,
     reviews: [
       {
-        name: 'Luke Scheffield',
+        name: 'Tommy Aquino',
         rating: 5,
         comment:
           'We must have eaten probably a hundred cases over the years. It is the standard.',
@@ -45,7 +45,7 @@ const products = [
         updatedAt: '2022-09-29T00:31:27.815+00:00',
       },
       {
-        name: 'Thomas Kim',
+        name: 'Diego Velazquez',
         rating: 5,
         comment: 'Bold. Spicy. Flavorful. Home.',
         user: '6334e719c72977e6cc01826a',
@@ -54,7 +54,7 @@ const products = [
         updatedAt: '2022-07-29T00:00:00.815+00:00',
       },
       {
-        name: 'Brian McNeel',
+        name: 'Ben Gozzoli',
         rating: 5,
         comment: 'This stuff is fire! So hot.',
         user: '6334e719c72977e6cc01826a',
@@ -63,7 +63,7 @@ const products = [
         updatedAt: '2022-06-22T00:31:27.815+00:00',
       },
       {
-        name: 'Peter Pek',
+        name: 'Franky Zurbaran',
         rating: 5,
         comment: 'Easy meal. Just go easy on the spice powder.',
         user: '6334e719c72977e6cc01826a',
@@ -86,7 +86,7 @@ const products = [
     numReviews: 2,
     reviews: [
       {
-        name: 'Jane Dough',
+        name: 'Dave Hume',
         rating: 5,
         comment: 'hidden gem. ',
         user: '6334e719c72977e6cc01826a',
@@ -95,9 +95,9 @@ const products = [
         updatedAt: '2022-09-29T00:31:27.815+00:00',
       },
       {
-        name: 'Steve Milligan',
-        rating: 5,
-        comment: 'dollar for dollar, best coffee in the game',
+        name: 'Renny Descartes',
+        rating: 3,
+        comment: 'decent. therefore it is not',
         user: '6334e719c72977e6cc01826a',
         _id: '6334e75f0d9ec9c82ce4e303',
         createdAt: '2022-09-29T00:31:27.815+00:00',
@@ -118,7 +118,7 @@ const products = [
     numReviews: 1,
     reviews: [
       {
-        name: 'filipe filipe',
+        name: '	Witty Stein',
         rating: 4,
         comment:
           'never thought this would be on my shelf, again and again. very good',
@@ -142,7 +142,7 @@ const products = [
     numReviews: 2,
     reviews: [
       {
-        name: 'usernotfound',
+        name: 'Ren Magrit',
         rating: 5,
         comment: 'love the flavor',
         user: '6334e719c72977e6cc01826a',
@@ -151,7 +151,7 @@ const products = [
         updatedAt: '2022-09-29T00:31:27.815+00:00',
       },
       {
-        name: 'coffee lover',
+        name: ' Moucault Fichel',
         rating: 3,
         comment: 'love the flavor',
         user: '6334e719c72977e6cc11826a',
@@ -174,16 +174,16 @@ const products = [
     numReviews: 2,
     reviews: [
       {
-        name: 'ellie kim',
+        name: 'Lalai Dama',
         rating: 5,
-        comment: 'cannot get better than this',
+        comment: 'Cannot get better than this',
         user: '6334e719c72977e6cc01826a',
         _id: '6334e75f0d9ec9c82ce4e811',
         createdAt: '2022-09-29T00:31:27.815+00:00',
         updatedAt: '2022-09-29T00:31:27.815+00:00',
       },
       {
-        name: 'steve fury',
+        name: 'Chany Jack',
         rating: 5,
         comment:
           'coffee is very strong. but i love this bean. reminds me of my travels in indonesia.',
@@ -207,7 +207,7 @@ const products = [
     numReviews: 1,
     reviews: [
       {
-        name: 'jer storm',
+        name: 'Eddie Husserl',
         rating: 4,
         comment: 'love the flavor',
         user: '6334e719c72977e6cc01826a',
@@ -230,7 +230,7 @@ const products = [
     numReviews: 1,
     reviews: [
       {
-        name: 'piotyr beck',
+        name: 'Carie Motillaire',
         rating: 5,
         comment: "It's actually muy bien.",
         user: '6334e719c72977e6cc01826a',

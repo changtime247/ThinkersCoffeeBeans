@@ -28,11 +28,11 @@ function AboutUsPage() {
             <p className='lead text-center'>
               Thinker's was founded on a belief that coffee should be fresh and
               ethical. We roast premium coffee beans in small batches because
-              freshly roasted coffee always taste great. And we source coffee
+              freshly roasted coffee always taste great. We source coffee
               beans from around the world in a humane and socially responsible
               way. We love engaging in conversation about fair trade or about
               roasting techniques. Whatever your choice of topic, we think you
-              will enjoy our coffee.
+              will enjoy our coffee.<br/>
               <Link xs={2} to='/' className='btn btn-outline-primary mt-4'>
                 Back home
               </Link>

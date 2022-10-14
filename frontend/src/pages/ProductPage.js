@@ -41,7 +41,7 @@ const ProductPage = () => {
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
     }
     // eslint-disable-next-line
-  }, [dispatch, params, successProductReview])
+  }, [dispatch, params, successProductReview, comment])
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty))
@@ -52,7 +52,7 @@ const ProductPage = () => {
     rating &&
       comment &&
       dispatch(createProductReview(params.id, { rating, comment }))
-    // window.location.reload()
+    window.location.reload()
   }
 
   const increase = (countInStock) => {
@@ -91,19 +91,7 @@ const ProductPage = () => {
                 <ListGroup.Item>
                   <div className='flipItContainer'>
                     <div className='flipIt productPage-flipIt'>
-                      <p>
-                        <span>D</span>
-                        <span>e</span>
-                        <span>s</span>
-                        <span>c</span>
-                        <span>r</span>
-                        <span>i</span>
-                        <span>p</span>
-                        <span>t</span>
-                        <span>i</span>
-                        <span>o</span>
-                        <span>n</span>
-                      </p>
+                      <p>Description</p>
                     </div>
                   </div>
                   <h3 className='my-0 text-center'>{product.name}</h3>
@@ -122,15 +110,7 @@ const ProductPage = () => {
               <ListGroup className='py-3'>
                 <div className='flipItContainer'>
                   <div className='flipIt productPage-flipIt'>
-                    <p>
-                      <span>R</span>
-                      <span>e</span>
-                      <span>v</span>
-                      <span>i</span>
-                      <span>e</span>
-                      <span>w</span>
-                      <span>s</span>
-                    </p>
+                    <p>Reviews</p>
                   </div>
                 </div>
                 {product.reviews.length === 0 && (
@@ -145,60 +125,64 @@ const ProductPage = () => {
                       <p>{review.comment}</p>
                     </ListGroup.Item>
                   ))}
-                  <ListGroup.Item>
-                    <h2>Write a review</h2>
-                    {successProductReview && (
-                      <Message variant='success'>
-                        Review submitted successfully
-                      </Message>
-                    )}
-                    {loadingProductReview && <Loader />}
-                    {errorProductReview && (
-                      <Message variant='danger'>{errorProductReview}</Message>
-                    )}
-                    {userInfo ? (
-                      <Form onSubmit={submitHandler}>
-                        <Form.Group>
-                          <Form.Label>Rating</Form.Label>
-                          <Form.Control
-                            as='select'
-                            value={rating}
-                            onChange={(e) => setRating(e.target.value)}
+                  {!product.reviews.some(
+                    (rev) => rev.user === userInfo?._id
+                  ) && (
+                    <ListGroup.Item>
+                      <h2>Write a review</h2>
+                      {successProductReview && (
+                        <Message variant='success'>
+                          Review submitted successfully
+                        </Message>
+                      )}
+                      {loadingProductReview && <Loader />}
+                      {errorProductReview && (
+                        <Message variant='danger'>{errorProductReview}</Message>
+                      )}
+                      {userInfo ? (
+                        <Form onSubmit={submitHandler}>
+                          <Form.Group>
+                            <Form.Label>Rating</Form.Label>
+                            <Form.Control
+                              as='select'
+                              value={rating}
+                              onChange={(e) => setRating(e.target.value)}
+                            >
+                              <option value=''>Select...</option>
+                              <option value='5'>Excellent</option>
+                              <option value='4'>Very Good</option>
+                              <option value='3'>Good</option>
+                              <option value='2'>Fair</option>
+                              <option value='1'>Poor</option>
+                            </Form.Control>
+                          </Form.Group>
+                          <Form.Group className='mt-2' controlId='comment'>
+                            <Form.Label>Comment</Form.Label>
+                            <Form.Control
+                              as='textarea'
+                              placeholder='Select a rating and share your review'
+                              row='3'
+                              value={comment}
+                              onChange={(e) => setComment(e.target.value)}
+                            ></Form.Control>
+                          </Form.Group>
+                          <Button
+                            disabled={loadingProductReview}
+                            className='mt-2'
+                            type='submit'
+                            variant='outline-primary'
                           >
-                            <option value=''>Select...</option>
-                            <option value='5'>Excellent</option>
-                            <option value='4'>Very Good</option>
-                            <option value='3'>Good</option>
-                            <option value='2'>Fair</option>
-                            <option value='1'>Poor</option>
-                          </Form.Control>
-                        </Form.Group>
-                        <Form.Group className='mt-2' controlId='comment'>
-                          <Form.Label>Comment</Form.Label>
-                          <Form.Control
-                            as='textarea'
-                            placeholder='Select a rating and share your review'
-                            row='3'
-                            value={comment}
-                            onChange={(e) => setComment(e.target.value)}
-                          ></Form.Control>
-                        </Form.Group>
-                        <Button
-                          disabled={loadingProductReview}
-                          className='mt-2'
-                          type='submit'
-                          variant='outline-primary'
-                        >
-                          Submit
-                        </Button>
-                      </Form>
-                    ) : (
-                      <Message>
-                        Please <Link to='/login'>sign in</Link> to share a
-                        review
-                      </Message>
-                    )}
-                  </ListGroup.Item>
+                            Submit
+                          </Button>
+                        </Form>
+                      ) : (
+                        <Message>
+                          Please <Link to='/login'>sign in</Link> to share a
+                          review
+                        </Message>
+                      )}
+                    </ListGroup.Item>
+                  )}
                 </ListGroup>
               </ListGroup>
             </Col>

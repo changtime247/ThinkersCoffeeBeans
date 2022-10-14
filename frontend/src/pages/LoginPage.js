@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Form, Button, Row, Col, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -29,7 +29,22 @@ const LoginPage = () => {
 
   return (
     <FormContainer>
-      <h1>Sign in</h1>
+      <Row>
+        <Col xs={4}>
+          <h1>Sign in</h1>
+        </Col>
+        <Col>
+          <Card id='user-test'>
+            <Card.Title>
+              To test, use:
+              <br />
+              <i className='fa-solid fa-envelope'></i> admin@test.com
+              <br />
+              <i className='fa-solid fa-key'></i> 123456
+            </Card.Title>
+          </Card>
+        </Col>
+      </Row>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader></Loader>}
       <Form onSubmit={submitHandler}>
@@ -56,10 +71,12 @@ const LoginPage = () => {
         </Button>
       </Form>
       <Row className='py-3 links-color-black'>
-        <Col>New Customer?</Col>
-        <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-          Register
-        </Link>
+        <Col>
+          New Customer?{' '}
+          <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+            Register
+          </Link>
+        </Col>
       </Row>
     </FormContainer>
   )

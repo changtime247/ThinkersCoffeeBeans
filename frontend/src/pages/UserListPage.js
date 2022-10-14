@@ -26,8 +26,13 @@ const UserListPage = () => {
     }
   }, [dispatch, navigate, successDelete, userInfo])
 
-  const deleteHandler = (id) => {
-    if (window.confirm('Are you sure?')) dispatch(deleteUser(id))
+  const deleteHandler = (id, email) => {
+    if (email === 'admin@admin.com' || email === 'admin@test.com') {
+      window.alert(`Cannot delete ${email} at this time`)
+      return
+    } else {
+      if (window.confirm('Are you sure?')) dispatch(deleteUser(id))
+    }
   }
 
   return (
@@ -75,7 +80,18 @@ const UserListPage = () => {
                     )}
                   </td>
                   <td className='d-flex justify-content-evenly'>
-                    <LinkContainer to={`/admin/user/${user._id}/edit`}>
+                    <LinkContainer
+                      to={`/admin/user/${user._id}/edit`}
+                      onClick={(event) => {
+                        if (
+                          user.email === 'admin@admin.com' ||
+                          user.email === 'admin@test.com'
+                        ) {
+                          event.preventDefault()
+                          window.alert(`Cannot edit ${user.email} at this time`)
+                        }
+                      }}
+                    >
                       <Button variant='light' className='btn-sm'>
                         <i className='fas fa-edit'></i>
                       </Button>
@@ -83,7 +99,7 @@ const UserListPage = () => {
                     <Button
                       variant='danger'
                       className='btn-sm'
-                      onClick={() => deleteHandler(user._id)}
+                      onClick={() => deleteHandler(user._id, user.email)}
                     >
                       <i className='fas fa-trash'></i>
                     </Button>
