@@ -1,8 +1,8 @@
 {
-  "name": "ThinkersCoffeeBeans",
+  "name": "thinkersCoffeeBeans",
   "version": "1.0.0",
   "description": "MERN ecommerce site for Thinkers",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node backend/server",
