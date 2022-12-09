@@ -94,7 +94,7 @@ mjane
 
 | Front            | Back         | Deploy    |
 | ---------------- | ------------ | --------- |
-| React            | Node.js      | Heroku    |
+| React            | Node.js      | Render    |
 | React Router Dom | Express      |           |
 | Redux            | MongoDB      |           |
 | Axios            | Mongoose     |           |
