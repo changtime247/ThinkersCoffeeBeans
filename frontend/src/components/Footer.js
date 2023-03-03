@@ -13,7 +13,7 @@ const Footer = () => {
                 About us &nbsp;&nbsp;
               </Nav.Link>
             </LinkContainer>
-            <span>&copy; 2022 Thinker's Coffee Beans</span>
+            <span>&copy; 2023 Thinker's Coffee Beans</span>
           </Col>
         </Row>
       </Container>
