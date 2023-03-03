@@ -1,6 +1,6 @@
 # Thinker's Coffee Beans Ecommerce
 
-> eCommerce platform built with the MERN stack and Redux - [check out the site](https://thinkers-coffee-beans.herokuapp.com/)
+> eCommerce platform built with the MERN stack and Redux - [check out the site](https://thinkerscoffeebeans.onrender.com/)
 
 ![thinkersGithubPhoto](https://user-images.githubusercontent.com/86252224/194432439-c5cc872b-e325-4e03-9d29-f602c2e0e7cb.png)
 
@@ -94,7 +94,7 @@ mjane
 
 | Front            | Back         | Deploy    |
 | ---------------- | ------------ | --------- |
-| React            | Node.js      | Heroku    |
+| React            | Node.js      | Render    |
 | React Router Dom | Express      |           |
 | Redux            | MongoDB      |           |
 | Axios            | Mongoose     |           |
